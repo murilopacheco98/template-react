@@ -1,15 +1,20 @@
 import React from 'react'
 import BannerStyled from './BannerStyled'
+import logo from './logo512.png'
 
-interface BannerProps {
-  titulo: string
-  background: string
-}
 
-const Banner: React.FC<BannerProps> = ({ titulo, background }) => {
+const Banner: React.FC = () => {
   return (
-    <BannerStyled urlImagem={background}>
-      <h6>{titulo}</h6>
+    <BannerStyled>
+      <header>
+        <div className='logo'>
+          <img src={logo} className="App-logo" alt="logo" />
+        </div>
+        <p>
+          UseState
+        </p>
+  
+        </header>
     </BannerStyled>
   )
 }

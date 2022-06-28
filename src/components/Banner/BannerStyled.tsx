@@ -1,21 +1,40 @@
 import styled from 'styled-components'
 
-interface BannerProps {
-  urlImagem: string
-}
-
-const BannerStyled = styled.div<BannerProps>`
+const BannerStyled = styled.div`
   width: 100%;
-  height: 40vh;
-  color: #f5f5f5;
-  background-image: url(${(props) => props.urlImagem});
+  height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  background-color: black;
+
+  .App-logo {
+    height: 50vh;
+  }
 
   h6 {
     font-size: 30px;
     color: #fff;
+  }
+
+  p {
+    color: white;
+    text-align:center;
+  }
+    
+    @media (prefers-reduced-motion: no-preference) {
+      .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+      }
+    }
+    
+    @keyframes App-logo-spin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
   }
 `
 
